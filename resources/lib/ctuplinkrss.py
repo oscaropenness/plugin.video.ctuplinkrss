@@ -50,6 +50,7 @@ def run():
         list_item.setArt({'fanart': ctuplink_plugin.getAddonInfo('fanart')})
         
         list_item.setProperty('IsPlayable', 'true')            
+        list_item.setInfo('video', {'plot': summary})
         listing.append((url, list_item, False))    
             
     
