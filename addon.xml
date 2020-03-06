@@ -8,10 +8,10 @@
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="de_DE">c't uplink Videopodcast</summary>
-        <description lang="de_DE">c't uplink Videopodcast</description>
-        <summary lang="en_GB">c't uplink video podcast</summary>
-        <description lang="en_GB">c't uplink video podcast</description>
+        <summary lang="de_DE">c't uplink: News aus Nerdistan</summary>
+        <description lang="de_DE">Mitglieder der c't-Redaktion diskutieren über Themen aus dem Heft und was sonst noch so in der IT-Welt passiert.</description>
+        <summary lang="en_GB">c't uplink: News from Nerdistan</summary>
+        <description lang="en_GB">Members of the c't editorial staff discuss topics from the magazine and what else happens in the IT world.</description>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
         <source>https://github.com/oscaropenness/plugin.video.ctuplinkrss</source>
@@ -20,6 +20,9 @@
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
+	    <screenshot>resources/media/screenshot-01.png</screenshot>
+	    <screenshot>resources/media/screenshot-02.png</screenshot>
+	    <screenshot>resources/media/screenshot-03.png</screenshot>
         </assets>
     </extension>
 </addon>

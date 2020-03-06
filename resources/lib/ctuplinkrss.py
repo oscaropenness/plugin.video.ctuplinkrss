@@ -32,6 +32,7 @@ def run():
     for item in d['entries']:
         title = item['title']
         url = item.enclosures[0].href
+        date = item['published']
         
         #Beschreibung der Folge auslesen, für Audio nicht notwendig, aber für Audio praktisch
         summary = item['description']    
@@ -50,7 +51,7 @@ def run():
         list_item.setArt({'fanart': ctuplink_plugin.getAddonInfo('fanart')})
         
         list_item.setProperty('IsPlayable', 'true')            
-        list_item.setInfo('video', {'plot': summary})
+        list_item.setInfo('video', {'plot': summary, 'aired': date})
         listing.append((url, list_item, False))    
             
     
