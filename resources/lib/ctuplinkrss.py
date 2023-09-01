@@ -8,12 +8,17 @@
 # eine etwas schönere und umfangreiche Version 
 # finden Sie unter plugin.audio.ctuplink_audio
 
+import datetime
 import sys
 import xbmcgui
 import xbmcplugin
 import xbmcaddon
 import feedparser
 
+def convert_rfc1123_to_datetime(date_time):
+    #Bsp.: Sat, 26 Aug 2023 06:30:00 +0200
+    format = '%a, %d %b %Y %H:%M:%S %z'
+    return datetime.datetime.strptime(date_time, format)
 
 def run():
     #Selbst-Referenzierung fürs Plug-in
@@ -32,8 +37,8 @@ def run():
     for item in d['entries']:
         title = item['title']
         url = item.enclosures[0].href
-        date = item['published']
-        
+        date = str(convert_rfc1123_to_datetime(item['published']).date())
+
         #Beschreibung der Folge auslesen, für Audio nicht notwendig, aber für Audio praktisch
         summary = item['description']    
         
